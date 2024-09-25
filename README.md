@@ -1,4 +1,4 @@
-# Remisenprojekt
+# Remisenproject
 
 ## Overview
 The **Remisenprojekt** is a comprehensive system developed for a medical practice to streamline various administrative and operational tasks. This project aims to improve the management of appointments, patient records, and day-to-day workflow within the practice. The system integrates seamlessly with existing infrastructure and provides a user-friendly interface for both staff and patients.
