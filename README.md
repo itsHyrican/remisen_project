@@ -7,8 +7,6 @@ The **Remisenprojekt** is a comprehensive system developed for a medical practic
 - **Appointment Scheduling**: Allows easy scheduling, rescheduling, and canceling of patient appointments.
 - **Patient Record Management**: Securely stores and manages patient data, including medical history, prescriptions, and treatment plans.
 - **Doctor-Patient Communication**: Facilitates better communication between doctors and patients through automated notifications and updates.
-- **Billing and Invoicing**: Simplifies the billing process with automatic invoice generation and payment tracking.
-- **Reports and Analytics**: Provides insightful reports on patient flow, appointment history, and practice performance.
 
 ## Prerequisites
 To run the Remisenprojekt, the following software and hardware are required:
