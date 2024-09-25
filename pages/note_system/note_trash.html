@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praxen in der Remise</title>
+    <link href="/css/output.css?version=15" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="bg-gray-300">
+  <!-- Container für das Layout -->
+  <div class="flex flex-col md:flex-row relative z-0">
+    <!-- Burger Menu Icon, nur auf kleinen Bildschirmen sichtbar -->
+    <div class="p-4 md:hidden">
+        <button id="menuButton" class="text-white focus:outline-none">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Sidebar / Menu, versteckt auf mobile, sichtbar auf Desktop -->
+    <div class="bg-gray-100 text-white w-64 p-5 md:min-h-screen shadow-md border-r-2 border-gray-200 rounded-e-xl fixed overflow-auto" style="height:100vh; top:0; left:0; z-index:20;" id="menu">
+      <div class="px-5 py-4 flex justify-between items-center">
+        <h2 class="text-lg md:text-xl font-semibold text-black">Praxen in der Remise</h2>
+        <!-- Schließen Button nur für mobile Geräte -->
+        <button id="closeMenuButton" class="text-white focus:outline-none md:hidden">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+      </div>
+      <div class="w-full bg-gray-200 h-0.5"></div>
+      <ul class="flex-1 p-2">
+        <!-- Weitere Listenelemente hier -->
+        <li class="hover:bg-gray-200 rounded-lg transition duration-150 ease-in-out">
+            <a href="/pages/note_system/note_main.html" class="flex items-center p-3 md:p-4 text-sm md:text-base ">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="black" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+              </svg>   
+                <span class="ml-3 text-black font-extralight">Dashboard</span>
+            </a>
+        </li>
+        <li class="hover:bg-gray-200 rounded-lg transition duration-150 ease-in-out">
+          <a href="/pages/note_system/note_create.html" class="flex items-center p-3 md:p-4 text-sm md:text-base">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="black" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+            </svg>
+            <span class="ml-3 text-black font-extralight">Termine planen</span>
+          </a>
+        </li>
+        <li>
+        </li>
+        <li class="hover:bg-gray-200 rounded-lg transition duration-150 ease-in-out">
+          <a href="/pages/note_system/note_list.html" class="flex items-center p-3 md:p-4 text-sm md:text-base">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="black" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 6.878V6a2.25 2.25 0 0 1 2.25-2.25h7.5A2.25 2.25 0 0 1 18 6v.878m-12 0c.235-.083.487-.128.75-.128h10.5c.263 0 .515.045.75.128m-12 0A2.25 2.25 0 0 0 4.5 9v.878m13.5-3A2.25 2.25 0 0 1 19.5 9v.878m0 0a2.246 2.246 0 0 0-.75-.128H5.25c-.263 0-.515.045-.75.128m15 0A2.25 2.25 0 0 1 21 12v6a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 18v-6c0-.98.626-1.813 1.5-2.122" />
+            </svg>
+            <span class="ml-3 text-black font-extralight">Terminliste </span>
+          </a>
+        </li>
+        <li class="bg-gray-200 mt-1 mb-1 rounded-lg transition duration-150 ease-in-out">
+          <a href="/pages/note_system/note_trash.html" class="flex items-center p-3 md:p-4 text-sm md:text-base">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="black" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
+            </svg>                      
+            <span class="ml-3 text-black font-extralight">Papierkorb</span>
+          </a>
+        </li>
+    </ul>
+    <div class="w-full bg-gray-200 h-0.5"></div>
+     <div class="mt-auto p-2">
+          <a href="#" class="flex items-center p-3 text-sm md:text-base hover:bg-gray-200 rounded-lg transition duration-150 ease-in-out">
+            <svg class="w-6 h-6" fill="none" stroke="black" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7"></path></svg>
+              <span class="ml-3 text-black font-extralight">Abmelden</span>
+          </a>
+      </div>
+    </div>
+    
+    
+    <div class="flex-1 bg-gray-300 p-3 md:ml-64 z-10"> 
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 bg-gray-200 rounded-lg p-4" id="patientContainer">
+            <!-- Hier werden die Patientendivs dynamisch eingefügt -->
+        </div>
+		    <div class="flex justify-end mt-4">
+        <button id="deleteAllButton" class="bg-red-500 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded">
+            Alle löschen
+        </button>
+    </div>
+    </div>
+
+	<div id="popupOverlay" class="hidden fixed inset-0 bg-black bg-opacity-50 z-40"></div>
+		<div id="detailsPopup" class="hidden fixed inset-0 flex items-center justify-center z-50">
+		<div class="bg-white rounded-lg shadow-lg w-3/4 max-w-4xl p-6 relative max-h-screen overflow-y-auto sm:max-h-[80vh]">
+			<div id="detailsContent" class="mt-3 text-center">
+          <!-- Hier werden die Patientendaten dynamisch eingefügt -->
+			</div>
+		</div>
+	</div>
+
+
+
+    <!-- Pop-up für Lösch-Bestätigung -->
+    <div id="deletePopup" class="hidden fixed inset-0 flex items-center justify-center z-50">
+        <div class="bg-white rounded-lg shadow-lg w-11/12 md:w-1/2 max-w-md p-6 relative">
+            <h3 class="text-lg font-semibold">Wollen Sie diesen Eintrag entgültig löschen?</h3>
+            <div class="flex justify-end mt-4">
+                <button id="confirmDeleteButton" class="bg-red-500 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded mr-2">Löschen</button>
+                <button onclick="closeDeletePopup()" class="bg-gray-300 hover:bg-gray-400 text-black font-semibold py-2 px-4 rounded">Abbrechen</button>
+            </div>
+        </div>
+    </div>
+	
+	<!-- Pop-up für Lösch-Bestätigung für alle Patienten -->
+	<div id="deletePopupAll" class="hidden fixed inset-0 flex items-center justify-center z-50">
+		<div class="bg-white rounded-lg shadow-lg w-1/2 max-w-md p-6 relative">
+			<h3 class="text-lg font-semibold">Wollen Sie alle Einträge entgültig löschen?</h3>
+			<div class="flex justify-end mt-4">
+				<button id="confirmDeleteAllButton" class="bg-red-500 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded mr-2">Löschen</button>
+				<button onclick="closeDeletePopupAll()" class="bg-gray-300 hover:bg-gray-400 text-black font-semibold py-2 px-4 rounded">Abbrechen</button>
+			</div>
+		</div>
+	</div>
+
+  <div class="hidden bg-opacity-50 bg-opacity-100 bg-green-700 bg-orange-600 bg-orange-300 bg-purple-400 bg-purple-600 bg-blue-300 bg-green-200 bg-yellow-300 bg-purple-500 bg-red-500 bg-red-700 hover:bg-red-900 bg-green-500 relative rounded-lg shadow p-3 text-center cursor-pointer flex-col justify-center content-center items-center w-full h-40 bg-opacity-100 hover:bg-opcaity-80"></div>  
+
+<script src="/js/sidebar.js?1502"></script>
+<script src="/js/get_deleted_termin.js?1502"></script>
+</body>
+</html>
